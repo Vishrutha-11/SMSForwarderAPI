@@ -1,0 +1,356 @@
+[
+  {
+    "ContainingType": "Payments.Controllers.AdminLoginController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/AdminLogin/ChangePassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Payments.Controllers.ChangePasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Payments.Controllers.AdminLoginController",
+    "Method": "Login",
+    "RelativePath": "api/AdminLogin/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Payments.Controllers.AdminLoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Payments.Controllers.GetShipmentDetailForPPDGCReciveController",
+    "Method": "GetShipmentDetailForPPDGCRecive",
+    "RelativePath": "api/GetShipmentDetailForPPDGCRecive",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Payments.Controllers.GetShipmentForPPDGCReciveModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Payments.Controllers.GetShipmentDetailForPPDGCReciveController",
+    "Method": "PPDGcRecivedAtLocation",
+    "RelativePath": "api/GetShipmentDetailForPPDGCRecive/PPDGCReciveAtLocation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Payments.Controllers.PPDGCReceiveRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Payments.Controllers.InternalShiftingController",
+    "Method": "GetInternalShiftingBillID",
+    "RelativePath": "api/InternalShifting/GetInternalShiftingBillID",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "submitDate",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "submitMonth",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "submitYear",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Payments.Controllers.InternalShiftingController",
+    "Method": "UpdateInternalShiftingBills",
+    "RelativePath": "api/InternalShifting/UpdateInternalShiftingBills",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Payments.Controllers.InternalShiftingSaveRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Payments.Controllers.JVMController",
+    "Method": "GetOtherPPDShipmentDetailsForPPDGCReceive",
+    "RelativePath": "api/JVM",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Payments.Controllers.GetOtherPPDShipmentForPPDGCReceiveModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Payments.Controllers.JVMController",
+    "Method": "OtherPPDGcRecivedAtLocation",
+    "RelativePath": "api/JVM/OtherPPDGcRecivedAtLocation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Payments.Controllers.OtherPPDGcRecivedAtLocationModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PaymentDetails.Controllers.PaymentDeatilsController",
+    "Method": "Get",
+    "RelativePath": "api/PaymentDeatils",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "submitDate",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "submitMonth",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "submitYear",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "monthYear",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PaymentDetails.Controllers.PaymentDeatilsController",
+    "Method": "Update",
+    "RelativePath": "api/PaymentDeatils/Update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "details",
+        "Type": "System.Collections.Generic.List\u00601[[PaymentDetails.Models.RakePaymentDetail, Payments, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NewAPI.Controllers.SMSForwardingController",
+    "Method": "Delete",
+    "RelativePath": "api/SMSForwarding/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NewAPI.Controllers.SMSForwardingController",
+    "Method": "GetAll",
+    "RelativePath": "api/SMSForwarding/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NewAPI.Controllers.SMSForwardingController",
+    "Method": "Save",
+    "RelativePath": "api/SMSForwarding/Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "NewAPI.Controllers.SMSForwardingConfigModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NewAPI.Controllers.SMSForwardingController",
+    "Method": "Update",
+    "RelativePath": "api/SMSForwarding/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "NewAPI.Controllers.SMSForwardingConfigModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Payments.Controllers.VehicleController",
+    "Method": "GetIntangleVehicleIDs",
+    "RelativePath": "api/Vehicle/GetIntangleVehicleIDs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Vehicle",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Payments.Controllers.VehicleController",
+    "Method": "GetVehicleInsurance",
+    "RelativePath": "api/Vehicle/GetVehicleInsurance/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Payments.Controllers.VehicleController",
+    "Method": "GetVehicleInsurances",
+    "RelativePath": "api/Vehicle/GetVehicleInsurances",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vehicleId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Payments.Controllers.VehicleController",
+    "Method": "GetOwnVehicles",
+    "RelativePath": "api/Vehicle/GetVehicles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Payments.Controllers.VehicleController",
+    "Method": "InsertVehicleInsurance",
+    "RelativePath": "api/Vehicle/InsertVehicleInsurance",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Payments.Controllers.VehicleInsuranceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Payments.Controllers.VehicleController",
+    "Method": "UpdateVehicleInsurance",
+    "RelativePath": "api/Vehicle/UpdateVehicleInsurance",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Payments.Controllers.VehicleInsuranceUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Payments.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Payments.WeatherForecast, Payments, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

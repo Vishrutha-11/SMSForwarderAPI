@@ -1,0 +1,1181 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "My API",
+    "description": "ASP.NET Core Web API",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/AdminLogin/Login": {
+      "post": {
+        "tags": [
+          "AdminLogin"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminLoginRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminLoginRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminLoginRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/AdminLogin/ChangePassword": {
+      "post": {
+        "tags": [
+          "AdminLogin"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/GetShipmentDetailForPPDGCRecive": {
+      "post": {
+        "tags": [
+          "GetShipmentDetailForPPDGCRecive"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetShipmentForPPDGCReciveModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetShipmentForPPDGCReciveModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetShipmentForPPDGCReciveModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/GetShipmentDetailForPPDGCRecive/PPDGCReciveAtLocation": {
+      "post": {
+        "tags": [
+          "GetShipmentDetailForPPDGCRecive"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PPDGCReceiveRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PPDGCReceiveRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PPDGCReceiveRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/InternalShifting/GetInternalShiftingBillID": {
+      "post": {
+        "tags": [
+          "InternalShifting"
+        ],
+        "parameters": [
+          {
+            "name": "submitDate",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "submitMonth",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "submitYear",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/InternalShifting/UpdateInternalShiftingBills": {
+      "post": {
+        "tags": [
+          "InternalShifting"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InternalShiftingSaveRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InternalShiftingSaveRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/InternalShiftingSaveRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/JVM": {
+      "post": {
+        "tags": [
+          "JVM"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetOtherPPDShipmentForPPDGCReceiveModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetOtherPPDShipmentForPPDGCReceiveModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetOtherPPDShipmentForPPDGCReceiveModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/JVM/OtherPPDGcRecivedAtLocation": {
+      "post": {
+        "tags": [
+          "JVM"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OtherPPDGcRecivedAtLocationModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OtherPPDGcRecivedAtLocationModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OtherPPDGcRecivedAtLocationModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PaymentDeatils": {
+      "get": {
+        "tags": [
+          "PaymentDeatils"
+        ],
+        "parameters": [
+          {
+            "name": "submitDate",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "submitMonth",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "submitYear",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "monthYear",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PaymentDeatils/Update": {
+      "post": {
+        "tags": [
+          "PaymentDeatils"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/RakePaymentDetail"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/RakePaymentDetail"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/RakePaymentDetail"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/SMSForwarding/GetAll": {
+      "get": {
+        "tags": [
+          "SMSForwarding"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/SMSForwarding/Insert": {
+      "post": {
+        "tags": [
+          "SMSForwarding"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SMSForwardingConfigModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SMSForwardingConfigModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SMSForwardingConfigModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/SMSForwarding/Update": {
+      "put": {
+        "tags": [
+          "SMSForwarding"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SMSForwardingConfigModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SMSForwardingConfigModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SMSForwardingConfigModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/SMSForwarding/Delete/{id}": {
+      "delete": {
+        "tags": [
+          "SMSForwarding"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Vehicle/GetVehicles": {
+      "get": {
+        "tags": [
+          "Vehicle"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Vehicle/GetVehicleInsurances": {
+      "get": {
+        "tags": [
+          "Vehicle"
+        ],
+        "parameters": [
+          {
+            "name": "vehicleId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Vehicle/GetVehicleInsurance/{id}": {
+      "get": {
+        "tags": [
+          "Vehicle"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Vehicle/InsertVehicleInsurance": {
+      "post": {
+        "tags": [
+          "Vehicle"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleInsuranceDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleInsuranceDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleInsuranceDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Vehicle/UpdateVehicleInsurance": {
+      "post": {
+        "tags": [
+          "Vehicle"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleInsuranceUpdateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleInsuranceUpdateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehicleInsuranceUpdateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Vehicle/GetIntangleVehicleIDs": {
+      "get": {
+        "tags": [
+          "Vehicle"
+        ],
+        "parameters": [
+          {
+            "name": "Vehicle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "operationId": "GetWeatherForecast",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AdminLoginRequest": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ChangePasswordRequest": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "oldPassword": {
+            "type": "string",
+            "nullable": true
+          },
+          "newPassword": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetOtherPPDShipmentForPPDGCReceiveModel": {
+        "type": "object",
+        "properties": {
+          "shipmentNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoiceNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "gcNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "year": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetShipmentForPPDGCReciveModel": {
+        "type": "object",
+        "properties": {
+          "shipmentNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoiceNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "gcNo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InternalShiftingRow": {
+        "type": "object",
+        "properties": {
+          "billNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "payment": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "isTDS": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "tds": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "gst": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "shortage": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "remarks": {
+            "type": "string",
+            "nullable": true
+          },
+          "passDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "extShortage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "barcode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InternalShiftingSaveRequest": {
+        "type": "object",
+        "properties": {
+          "submitDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "rows": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InternalShiftingRow"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OtherPPDGcRecivedAtLocationModel": {
+        "type": "object",
+        "properties": {
+          "shipMentID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "weighment": {
+            "type": "number",
+            "format": "double"
+          },
+          "deliveryDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "recivedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "remarks": {
+            "type": "string",
+            "nullable": true
+          },
+          "unLoad": {
+            "type": "string",
+            "nullable": true
+          },
+          "hsM3": {
+            "type": "string",
+            "nullable": true
+          },
+          "expenseUnloadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cb": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PPDGCReceiveRequest": {
+        "type": "object",
+        "properties": {
+          "shipMentID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "weighment": {
+            "type": "number",
+            "format": "double"
+          },
+          "deliveryDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "recivedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "unLoad": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "remarks": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RakePaymentDetail": {
+        "type": "object",
+        "properties": {
+          "slNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "billNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "place": {
+            "type": "string",
+            "nullable": true
+          },
+          "passDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "barcode": {
+            "type": "string",
+            "nullable": true
+          },
+          "monthYear": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "actualSubmitDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "rakeNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "rakeTypeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "tonns": {
+            "type": "number",
+            "format": "double"
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "payment": {
+            "type": "number",
+            "format": "double"
+          },
+          "isTDS": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tds": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "gst": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "extShortage": {
+            "type": "number",
+            "format": "double"
+          },
+          "shortage": {
+            "type": "number",
+            "format": "double"
+          },
+          "remarks": {
+            "type": "string",
+            "nullable": true
+          },
+          "submitDate": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "submitMonth": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "submitYear": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "customerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ub": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SMSForwardingConfigModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "filterName": {
+            "type": "string",
+            "nullable": true
+          },
+          "filterType": {
+            "type": "string",
+            "nullable": true
+          },
+          "contactNumbers": {
+            "type": "string",
+            "nullable": true
+          },
+          "forwardingMethod": {
+            "type": "string",
+            "nullable": true
+          },
+          "forwardingDuration": {
+            "type": "string",
+            "nullable": true
+          },
+          "expireAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "isEnabled": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "VehicleInsuranceDto": {
+        "type": "object",
+        "properties": {
+          "vehicleID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "premiumAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "ncb": {
+            "type": "string",
+            "nullable": true
+          },
+          "policyNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "idvValue": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "serviceTaxAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "customerID": {
+            "type": "string",
+            "nullable": true
+          },
+          "insuranceCompanyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "gvw": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "fromInsuranceDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "toInsuranceDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "agent": {
+            "type": "string",
+            "nullable": true
+          },
+          "cashBack": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "owner": {
+            "type": "string",
+            "nullable": true
+          },
+          "remarks": {
+            "type": "string",
+            "nullable": true
+          },
+          "cb": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "VehicleInsuranceUpdateDto": {
+        "type": "object",
+        "properties": {
+          "vehicleID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "premiumAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "ncb": {
+            "type": "string",
+            "nullable": true
+          },
+          "policyNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "idvValue": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "serviceTaxAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "customerID": {
+            "type": "string",
+            "nullable": true
+          },
+          "insuranceCompanyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "gvw": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "fromInsuranceDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "toInsuranceDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "agent": {
+            "type": "string",
+            "nullable": true
+          },
+          "cashBack": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "owner": {
+            "type": "string",
+            "nullable": true
+          },
+          "remarks": {
+            "type": "string",
+            "nullable": true
+          },
+          "cb": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vehicleInsuranceID": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

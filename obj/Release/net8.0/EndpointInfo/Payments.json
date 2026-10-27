@@ -1,0 +1,593 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "My API",
+    "description": "ASP.NET Core Web API",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/GetShipmentDetailForPPDGCRecive": {
+      "post": {
+        "tags": [
+          "GetShipmentDetailForPPDGCRecive"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetShipmentDetailForPPDGCReciveModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetShipmentDetailForPPDGCReciveModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetShipmentDetailForPPDGCReciveModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/InternalShifting/GetInternalShiftingBillID": {
+      "post": {
+        "tags": [
+          "InternalShifting"
+        ],
+        "parameters": [
+          {
+            "name": "submitDate",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "submitMonth",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "submitYear",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/InternalShifting/UpdateInternalShiftingBills": {
+      "post": {
+        "tags": [
+          "InternalShifting"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InternalShiftingSaveRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InternalShiftingSaveRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/InternalShiftingSaveRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PaymentDeatils": {
+      "get": {
+        "tags": [
+          "PaymentDeatils"
+        ],
+        "parameters": [
+          {
+            "name": "submitDate",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "submitMonth",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "submitYear",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "monthYear",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PaymentDeatils/Update": {
+      "post": {
+        "tags": [
+          "PaymentDeatils"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/RakePaymentDetail"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/RakePaymentDetail"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/RakePaymentDetail"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/SMSForwarding/GetAll": {
+      "get": {
+        "tags": [
+          "SMSForwarding"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/SMSForwarding/Insert": {
+      "post": {
+        "tags": [
+          "SMSForwarding"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SMSForwardingConfigModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SMSForwardingConfigModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SMSForwardingConfigModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/SMSForwarding/Update": {
+      "put": {
+        "tags": [
+          "SMSForwarding"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SMSForwardingConfigModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SMSForwardingConfigModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SMSForwardingConfigModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/SMSForwarding/Delete/{id}": {
+      "delete": {
+        "tags": [
+          "SMSForwarding"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "operationId": "GetWeatherForecast",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "GetShipmentDetailForPPDGCReciveModel": {
+        "type": "object",
+        "properties": {
+          "shipmentNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoiceNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "gcNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "year": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InternalShiftingRow": {
+        "type": "object",
+        "properties": {
+          "billNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "payment": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "isTDS": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "tds": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "gst": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "shortage": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "remarks": {
+            "type": "string",
+            "nullable": true
+          },
+          "passDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "extShortage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "barcode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InternalShiftingSaveRequest": {
+        "type": "object",
+        "properties": {
+          "submitDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "rows": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InternalShiftingRow"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RakePaymentDetail": {
+        "type": "object",
+        "properties": {
+          "slNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "billNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "place": {
+            "type": "string",
+            "nullable": true
+          },
+          "passDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "barcode": {
+            "type": "string",
+            "nullable": true
+          },
+          "monthYear": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "actualSubmitDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "rakeNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "rakeTypeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "tonns": {
+            "type": "number",
+            "format": "double"
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "payment": {
+            "type": "number",
+            "format": "double"
+          },
+          "isTDS": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tds": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "gst": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "extShortage": {
+            "type": "number",
+            "format": "double"
+          },
+          "shortage": {
+            "type": "number",
+            "format": "double"
+          },
+          "remarks": {
+            "type": "string",
+            "nullable": true
+          },
+          "submitDate": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "submitMonth": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "submitYear": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "customerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ub": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SMSForwardingConfigModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "filterName": {
+            "type": "string",
+            "nullable": true
+          },
+          "filterType": {
+            "type": "string",
+            "nullable": true
+          },
+          "contactNumbers": {
+            "type": "string",
+            "nullable": true
+          },
+          "forwardingMethod": {
+            "type": "string",
+            "nullable": true
+          },
+          "forwardingDuration": {
+            "type": "string",
+            "nullable": true
+          },
+          "expireAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "isEnabled": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
